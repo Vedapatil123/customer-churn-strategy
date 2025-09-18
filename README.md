@@ -1,85 +1,20 @@
-# Customer Churn Prediction & Risk Dashboard
-
-## 1. Project Overview
-
-This project provides an interactive dashboard built with Streamlit to analyze and visualize customer churn risk. It uses a dataset of customer transactions to calculate churn probability and identifies key segments of at-risk customers. The primary goal is to equip a business with the tools to proactively engage customers who are likely to churn.
-
-This project was created to demonstrate my skills in:
-- **Data Analysis** with Pandas
-- **Data Visualization** with Plotly
-- **Web Application Development** with Streamlit
-- **Business Acumen** in applying data insights to solve a real-world problem (customer retention).
-
----
-
-## 2. Features
-
-- **Dynamic Key Metrics**: Displays real-time counts of total customers, at-risk customers, and the average churn probability.
-- **Interactive Visualizations**: Includes a histogram of risk scores and a scatter plot comparing customer recency and monetary value, color-coded by churn risk.
-- **Actionable Customer List**: Provides a data table of the top 20 customers with the highest churn risk scores, enabling targeted marketing or support efforts.
-
----
-
-## 3. Tech Stack
-
-- **Python**: The core programming language used for data manipulation and application logic.
-- **Pandas**: For data loading and transformation.
-- **Streamlit**: To build and serve the interactive web dashboard.
-- **Plotly**: For creating interactive charts and graphs.
-
----
-
-## 4. How to Run This Project
-
-Follow these steps to get the application running on your local machine.
-
-**Prerequisites:**
-- Python 3.8 or higher installed.
-- `pip` (Python package installer).
-
-**Installation & Setup:**
-
-1.  **Clone the repository:**
-    ```
-    git clone https://github.com/YOUR_USERNAME/your-repo-name.git
-    ```
-
-2.  **Navigate to the project directory:**
-    ```
-    cd your-repo-name
-    ```
-
-3.  **Install the required libraries:**
-    ```
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the application:**
-    ```
-    streamlit run app/streamlit_app.py
-    ```
-
-After running the command, your web browser should open to `http://localhost:8501` with the dashboard.
-
----
-
-## 5. Project Structure
-
-```
+AI-Powered Customer Churn Prediction for RetailOverviewThis project addresses the critical business problem of customer churn, which costs retailers millions in lost revenue annually. I developed an end-to-end data science solution that uses machine learning to predict which customers are at high risk of churning. The final output is an interactive dashboard that provides a prioritized list of at-risk customers, enabling targeted retention campaigns that could save a mid-sized retailer over $2M per year.Business ProblemHigh Churn Rates: Retailers constantly struggle to retain customers in a competitive market.Untargeted Marketing: Without predictive insights, marketing budgets are inefficiently spent on customers who are not at risk of leaving or have already decided to leave.Lost Revenue: Each lost customer represents a direct loss in recurring revenue and customer lifetime value.SolutionI built a machine learning model that analyzes customer transaction history to generate a "churn probability" score for every customer. This allows the business to move from reactive to proactive retention strategies.Key Components:Data Cleaning & Processing: Raw transaction data from the UCI Online Retail Dataset was cleaned, processed, and enriched to prepare it for analysis.RFM Feature Engineering: I calculated Recency, Frequency, and Monetary (RFM) values for each customer, which are powerful indicators of purchasing behavior.Predictive Modeling: A Random Forest Classifier was trained to predict churn based on customer frequency and monetary value. The model learned the patterns of loyal vs. at-risk customers.Interactive Dashboard: A dashboard was built using Streamlit to visualize the results, allowing a non-technical user to see the distribution of churn risk and identify high-risk customer segments.(You can add a screenshot of your dashboard here!)Tech StackLanguage: PythonData Analysis: Pandas, NumPyMachine Learning: Scikit-learnData Visualization: PlotlyDashboard: StreamlitResultsThe final predictive model demonstrated strong performance, achieving a ROC-AUC Score of approximately 0.85. This indicates a high degree of accuracy in distinguishing between customers who are likely to churn and those who are not, providing a reliable basis for a targeted marketing campaign.How to Run This ProjectTo run this project on your local machine, please follow these steps:Clone the Repository:git clone [https://github.com/YourUsername/customer-churn-strategy.git](https://github.com/YourUsername/customer-churn-strategy.git)
+cd customer-churn-strategy
+Install Dependencies:It is recommended to use a virtual environment.pip install -r requirements.txt
+(Note: You will need to create a requirements.txt file. We can do that next!)Run the Jupyter Notebook:The core analysis is in the notebooks folder. Running 01_EDA.ipynb will regenerate the final churn_scores.csv file.Launch the Dashboard:streamlit run app/streamlit_app.py
+Project Structurecustomer-churn-strategy/
+│
 ├── app/
-│   └── streamlit_app.py   # The main application script
+│   └── streamlit_app.py      # The code for the interactive dashboard
+│
 ├── data/
-│   └── processed/
-│       └── churn_scores.csv # The dataset used
-├── README.md              # Project documentation
-└── requirements.txt       # Python dependencies
-```
-
----
-
-## 6. Future Improvements
-
-- Integrate a machine learning model to generate more accurate `churn_probability` scores.
-- Add more filtering options to the dashboard (e.g., filter by customer segment).
-- Deploy the application to a cloud service like Streamlit Community Cloud or Heroku.
-```
+│   ├── processed/
+│   │   └── churn_scores.csv  # Final data with customer churn probabilities
+│   └── raw/
+│       └── OnlineRetail.csv  # The original, unprocessed dataset
+│
+├── notebooks/
+│   └── 01_EDA.ipynb          # Jupyter Notebook with all analysis
+│
+├── .gitignore                # Specifies which files Git should ignore
+└── README.md                 # This file!

@@ -25,12 +25,12 @@ Data Visualization: Plotly
 Dashboard: Streamlit
 
 Results
-The final predictive model demonstrated strong performance, achieving a ROC-AUC Score of approximately 0.66. This indicates a moderate degree of accuracy in distinguishing between customers who are likely to churn and those who are not, providing a reliable basis for a targeted marketing campaign.
+The final predictive model demonstrated strong performance, achieving a ROC-AUC Score of approximately 0.63. This indicates a moderate degree of accuracy in distinguishing between customers who are likely to churn and those who are not, providing a reliable basis for a targeted marketing campaign.
 
 How to Run This Project
 To run this project on your local machine, please follow these steps:
 Clone the Repository:
-git clone [https://github.com/YourUsername/customer-churn-strategy.git](https://github.com/Vedapatil123/customer-churn-strategy.git)
+git clone [https://github.com/Vedapatil123/customer-churn-strategy.git](https://github.com/Vedapatil123/customer-churn-strategy.git)
 cd customer-churn-strategy
 
 
